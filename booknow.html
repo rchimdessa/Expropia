@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>eXploropia - Book Now!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="stylehome.css">
+
+        
+        <style>
+             
+             h2{
+                 background-color:white;
+                 opacity:0.5;
+                 padding:20px;
+                 color:black;
+                 border-radius:20px;
+                 box-shadow: 0px 20px 100px 0px rgba(0,0,0,0.2);
+             }
+            
+             #theform{
+                
+                 box-shadow:10px 10px 80px 10px black;                              
+                 color:white;
+                 display: table;
+                 background-color:darkcyan;
+                 padding:50px;
+                 border:1px solid darkcyan;
+                 border-radius:30px;
+                 margin-left: 400px;
+                 text-transform: uppercase;
+             }
+             .row{
+                 display: table-row;
+             }
+             .row label{
+                 display: table-cell;
+                 padding:5px;
+             }
+             .row input,select{
+                 display: table-cell;
+                 background-color:white;
+                 border-style:hidden hidden ridge hidden;
+                 border-radius: 12px;
+                 padding:5px;
+                 color:black;
+                 font-size:13px;
+             }
+            input.button{
+                 padding:10px;
+                 color:white;
+                 font-style:italic;
+                 font-weight:900;
+                 border-radius: 15px;
+                 box-shadow: 3px 2px 70px 2px darkgrey;
+             }
+             input.button:hover{
+                 color:white;
+                 background-color:goldenrod;
+                 color: black;
+                 box-shadow: 3px 2px 70px 2px greenyellow;
+             }
+            
+                         
+        </style>
+
+        <script>
+        
+             function myFunction(){
+                var name = document.getElementById("fullname").value;
+                var cit = document.getElementById("address").value;
+                  if(name.length==""){
+                      document.getElementById("demo").innerHTML="name shouldn't be empty"
+                       document.getElementById("demo").style.color="aqua";
+                      return false;
+
+                  };
+                  return true;
+
+                  
+
+                  if(cit.length==""){
+                      document.getElementById("demo1").innerHTML="name shouldn't be empty"
+                       document.getElementById("demo1").style.color="aqua";
+                      return false;
+
+                  };
+                  return true;
+
+                }
+                  
+        
+        </script>
+
+    </head>
+        <body>
+            
+            
+            
+                <div id="banner" style=" padding: 21px; background:black url(logo.png) repeat-x center center !important;opacity: 0.9;">
+                     <a href="webproject.html"> <h1 style="text-align: left; color: aliceblue;"><strong style="color:darkcyan; font-family:monospace; padding:6px; border:4px solid white; border-radius:50px; background-color:white; font-size: 25px;"><span style="color:red;">eX</span>ploropia</strong></h1> </a> <br>
+                  <h5 style="font-size:17px;"><em><span style="color:lawngreen;">Explo</span><span style="color: yellow;">re&nbsp;Eth</span><span style="color:orangered;">iopia<span style="color: white;"></span></span></em></h5></div>
+            
+            
+                  <br><br>
+                  <h1>Book your awesome trip to explore Ethiopia now!</h1><hr>
+                  <div class="welcome" style="margin:20px 100px 20px 20px;">
+                        <p style="font-weight: 900;">
+                    <br>Please take your time and peruse our site to gather the different pieces of information necessary to plan your tour.
+                    <br>Fill out the form below by writing down all the necessary informations. After we receive your email we’ll take it from there!
+
+                    <br><br>Thank you for your interests in Ethiopia and we look forward to serving with you. 
+                
+                
+                        </p>
+                  </div>
+            
+            
+            
+            
+            
+ <br>        <div>   
+            <form id="theform" action="#" method="POST" onsubmit="return myFunction()">
+              <div class="row">
+                  <label for="fullname">Full Name:</label>
+                  <input type="text" id="fullname" name="fl" placeholder="enter name here">
+                  <p id="demo"></p>
+              </div>
+
+<br><br>
+                <div class="row">
+                  <label for="address">city:</label>
+                  <input type="text" id="address" name="ad" placeholder="enter city" >
+                  <p id="demo1"></p>
+
+                </div>  
+                <br><br>                 
+              <div class="row">
+                  <label for="gender">Gender:</label>
+                  <input type="radio" id="gender" name="gender">Male &nbsp;&nbsp;&nbsp;&nbsp; 
+                  <input type="radio" id="gender" name="gender">Female
+              </div>
+<br><br>
+                <div class="row">
+                  <label for="country">country:</label>
+                  <select id="country" name="country">
+                      <option>Ethiopia</option>
+                      <option>Eritrea</option>
+                      <option>Kenya</option>
+                      <option>Nigeria</option>
+                      <option>Germany</option>
+                      <option>USA</option>
+                      <option>Canada</option>
+                  </select>
+                </div>  
+<br><br>
+                <div class="row">
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" name="em" placeholder="someone@example.com">
+                </div>  
+<br><br>
+                <div class="row">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone" placeholder="enter a valid number">
+                </div>  
+<br><br>       
+              <div class="row">           
+                  <label for="pos">Postal-code:</label>
+                  <input type="text" id="pos" name="pos" placeholder="enter your postal code here">
+              </div>    
+ <br><br>       
+            <!--  <div class="row"> -->           
+                 <!-- <label for="psw confirm">Re-enter Password:</label> -->
+                 <!-- <input type="password" id="psw confirm" name="psw" placeholder="verify password"> --> 
+                  <br><br><br><br><br>
+                  <input class="button" type="submit" name="submit" value="Book Me!"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input id="cancel" class="button"type="reset"  name="reset"  value="Cancel">               
+              </div>
+              </form>
+              </div>
+              <br><br>
+
+         
+
+              <div class="welcome" style="margin:20px 100px 20px 20px;">
+                    <p style="color: darkred"><b>THANK YOU FOR YOUR VALUABLE TIME!</b> </p>
+            
+                    <p>
+            <br>All the information website visitors provide in the contact form is confidential and is not to be disclosed 
+             <br>without a given permission. 
+            
+                    </p>
+              </div><br><br>
+
+<hr>
+              <footer id="foot" style="padding: 8px;">
+                    <div style="text-align: right; font-weight: 600;"><a style="color: azure;" href="terms.html">Terms and Conditions</a></div>
+    <div style="float:right; font-weight: 600;"><a style="color: azure;" href="feedback.html">Feedback</a></div><br>
+    <div style="text-align: right; font-weight: 600;"><a style="color: azure;" href="webproject.html">Home</a></div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.png" width="110" height="100" alt="logo">
+                    <br><i style="padding: 50px;">Copyright © 2019 eXploropia.com. All Rights Reserved</i>
+                </footer>
+                
+
+
+
+
+        </body>
+</html>
